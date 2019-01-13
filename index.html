@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>PERM Archive</title>
+    <link href="https://tools-static.wmflabs.org/cdnjs/ajax/libs/choices.js/3.0.3/styles/css/choices.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://tools-static.wmflabs.org/cdnjs/ajax/libs/choices.js/3.0.3/choices.min.js"></script>
+    <script type="text/javascript">
+      document.addEventListener( "DOMContentLoaded", function() {
+          var date = new Date();
+          var month = date.getMonth() + 1;
+          if( month < 10 ) month = "0" + month;
+          document.getElementById( "start" ).value = date.getFullYear() + "-" + month;
+          document.getElementById( "end" ).value = ( date.getFullYear() - 1 ) + "-" + month;
+          new Choices( "#perms" ); } );</script>
+  </head>
+  <body>
+    <h1>PERM Archive</h1>
+    <nav style="font-size: 80%"><a href="https://tools.wmflabs.org/apersonbot/">Tools</a> &gt; <b>PERM archive</b></nav>
+    <p>
+      Search through the <a href="https://en.wikipedia.org/wiki/Wikipedia:Requests_for_permissions/Archive">PERM archives</a>.
+    </p>
+    <form action="cgi-bin/search.py" method="get">
+      <table>
+        <tr>
+          <th><label for="users">Users<br /><small>one per line<br />leave blank for "all"</small></label></th>
+          <td><textarea name="users" id="users"></textarea></td>
+        </tr>
+        <tr>
+          <th><label>Outcome</label></th>
+          <td><table><tr>
+          <td>
+            <input type="radio" name="outcome" value="any" id="outcome-any" checked/>
+            <label for="outcome-any">Any</label>
+            <br />
+            <input type="radio" name="outcome" value="approved" id="outcome-approved"/>
+            <label for="outcome-approved">Approved</label>
+            <br />
+            <input type="radio" name="outcome" value="denied" id="outcome-denied"/>
+            <label for="outcome-denied">Denied</label>
+          </td>
+          </tr></table></td>
+        </tr>
+        <tr>
+          <th><label for="perms">Permissions<br /><small>leave blank for "any"</small></label></th>
+          <td><select class="form-control" name="perms" id="perms" multiple>
+            <option value="awb">AWB</option>
+            <option value="apt">Autopatrolled</option>
+            <option value="con">Confirmed</option>
+            <option value="fm">File mover</option>
+            <option value="npr">New page reviewer</option>
+            <option value="pm">Page mover</option>
+            <option value="pcr">Pending changes reviewer</option>
+            <option value="rb">Rollback</option>
+            <option value="acc">Account creator</option>
+            <option value="evt">Event coordinator</option>
+            <option value="ec">Extended confirmed</option>
+            <option value="mms">Mass message sender</option>
+            <option value="te">Template editor</option>
+          </select></td>
+        </tr>
+        <tr>
+          <th><label for="start">Start<br /><small>YYYY-MM</small></label></th>
+          <td><input type="text" id="start" name="start" /></td>
+        </tr>
+        <tr>
+          <th><label for="end">End<br /><small>YYYY-MM</small></label></th>
+          <td><input type="text" id="end" name="end" /></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input class="mw-ui-button mw-ui-constructive" type="submit" /></td>
+        </tr>
+      </table>
+    </form>
+    <footer>
+      <a href="https://en.wikipedia.org/wiki/User:Enterprisey" title="Enterprisey's user page on the English Wikipedia">Enterprisey</a>
+      (<a href="https://en.wikipedia.org/wiki/User_talk:Enterprisey" title="Enterprisey's talk page on the English Wikipedia">talk!</a>)
+    </footer>
+  </body>
+</html>

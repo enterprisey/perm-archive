@@ -1,0 +1,27 @@
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>PERM Archive - Results</title>
+    <link href="https://tools-static.wmflabs.org/cdnjs/ajax/libs/sortable/0.8.0/css/sortable-theme-light.min.css" rel="stylesheet" />
+    <link href="../style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://tools-static.wmflabs.org/cdnjs/ajax/libs/sortable/0.8.0/js/sortable.min.js"></script>
+    <script type="text/javascript">
+        document.addEventListener( "DOMContentLoaded", function() { Sortable.initTable( document.querySelector( "#result" ) ); } );
+    </script>
+  </head>
+  <body>
+    <h1>Results for the PERM search</h1>
+    <nav style="font-size: 80%"><a href="https://tools.wmflabs.org/apersonbot/">Tools</a> &gt; <a href="https://tools.wmflabs.org/apersonbot/perm-archive/">PERM Archive</a> &gt; <b>Results</b></nav>
+    <p><a href="index.html">&larr; New search</a></p>
+    $content
+    <p><a href="index.html">&larr; New search</a></p>
+    <footer>
+      <a href="https://en.wikipedia.org/wiki/User:Enterprisey" title="Enterprisey's user page on the English Wikipedia">Enterprisey</a>
+      (<a href="https://en.wikipedia.org/wiki/User_talk:Enterprisey" title="Enterprisey's talk page on the English Wikipedia">talk!</a>)
+    </footer>
+  </body>
+</html>

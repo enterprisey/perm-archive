@@ -1,0 +1,191 @@
+body {
+    margin: 40px auto;
+    max-width: 650px;
+    font-size: 16px;
+    color: #333;
+    font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+    background-color: #F3F3F3;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+h2 {
+    font-size: 130:
+}
+
+h1, h2, h3 {
+    margin-bottom: 0.25em;
+}
+
+button, input[type=submit] {
+    cursor: pointer;
+    font-family: Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif;
+}
+
+textarea {
+    width: 100%;
+}
+
+input[type=number],textarea {
+    border-radius: 2px;
+    border: thin solid #CCC;
+    padding: 0.5em;
+}
+
+input[type=number]:focus, textarea:focus {
+    box-shadow: inset 0 0 0 2px #347bff;
+    border-color: #347bff;
+    outline: 0;
+}
+
+input[type=number]:not(:disabled) {
+    -webkit-transition: color 100ms,border-color 100ms,box-shadow 100ms;
+    -moz-transition: color 100ms,border-color 100ms,box-shadow 100ms;
+    transition: color 100ms,border-color 100ms,box-shadow 100ms;
+}
+
+footer {
+    margin-top: 1em;
+    font-size: smaller;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+table {
+    border-collapse: collapse;
+    background-color: white;
+}
+
+form table {
+    background-color: transparent;
+    width: 80%;
+}
+
+form table input[type=number] {
+    width: 100%;
+}
+
+form table table {
+    width: 100%;
+}
+
+td, th {
+    padding: 0.25em;
+    border: thin solid gray;
+}
+
+td.approved {
+    background-color: #b7e0b7;
+}
+
+td.denied {
+    background-color: #e0b7b7;
+}
+
+form td, form th {
+    border: none;
+}
+
+form th {
+    text-align: right;
+}
+
+form th small {
+    font-weight: normal;
+}
+
+form input[type=submit] {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#current .date {
+    font-size: smaller;
+}
+
+input[type=radio] {
+    vertical-align: middle;
+    margin-top: -1px;
+}
+
+svg {
+    overflow: visible;
+}
+
+/* Hide spinner in type=number */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+p.error {
+    color: #B70000;
+    font-weight: bold;
+}
+
+/* MediaWiki stuff */
+.mw-ui-button.mw-ui-constructive {
+    background-color: #3366cc;
+    color: #fff;
+    border: 1px solid #3366cc;
+    text-shadow: 0 1px rgba(0,0,0,0.1);
+}
+
+.mw-ui-button {
+    font-family: inherit;
+    font-size: 1em;
+    display: inline-block;
+    min-width: 4em;
+    max-width: 28.75em;
+    padding: 0.546875em 1em;
+    line-height: 1.286;
+    margin: 0;
+    border-radius: 2px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    *display: inline;
+    zoom: 1;
+    vertical-align: middle;
+    background-color: #f8f9fa;
+    color: #222222;
+    border: 1px solid #a2a9b1;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.mw-ui-button.mw-ui-constructive:hover {
+    background-color: #447ff5;
+    border-color: #447ff5;
+}
+
+.mw-ui-button.mw-ui-constructive:active {
+    background-color: #2a4b8d;
+    border-color: #2a4b8d;
+    box-shadow: none;
+}
+
+.mw-ui-button.mw-ui-constructive:focus {
+    box-shadow: inset 0 0 0 1px #3366cc,inset 0 0 0 2px #ffffff;
+}
+
+.mw-ui-button:not(:disabled) {
+    -webkit-transition: background-color 100ms,color 100ms,border-color 100ms,box-shadow 100ms;
+    -moz-transition: background-color 100ms,color 100ms,border-color 100ms,box-shadow 100ms;
+    transition: background-color 100ms,color 100ms,border-color 100ms,box-shadow 100ms;
+}
